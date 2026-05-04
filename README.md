@@ -21,4 +21,4 @@ Projekti automatisoi uuden Debian-virtuaalikoneen peruskonfigurointeja Ansiblell
 
 
 Tekijät:
-Sami Hiltunen & Henri Äikäs
+_Sami Hiltunen & Henri Äikäs_
