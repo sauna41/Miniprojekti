@@ -21,7 +21,7 @@ Projekti automatisoi uuden Debian-virtuaalikoneen peruskonfigurointeja Ansiblell
 
 ```
 miniprojekti/
-  ├── inventory
+  ├── hosts.ini
   ├── playbook.yml
   ├── setup.sh 
   ├── vars.yml 
