@@ -1,0 +1,2 @@
+# Miniprojekti
+Palvelinten Hallinta miniprojekti
