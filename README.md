@@ -26,8 +26,16 @@ miniprojekti/
   ├── setup.sh 
   ├── vars.yml 
   └── roles/
+      ├── hostname/
+      ├── nginx/
+      ├── ufw/
+      ├── ip/
+      ├── packages/
+      ├── user/
+      └── security/
 ```
 
+Projekti suoritetaan ajamalla setup.sh -skripti, joka päivitää paketit, asentaa ansiblen ja ajaa sen jäkeen playbookin. 
 
 Tekijät:
 _Sami Hiltunen & Henri Äikäs_
