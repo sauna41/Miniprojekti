@@ -1,0 +1,16 @@
+- apt:
+   name: nginx
+   state: latest
+
+- name: Apply Nginx template
+  template:
+    src: files/nginx.conf.j2
+    dest: /etc/nginx/sites-available/homepage
+  notify: Restart nginx
+
+- name: Enable site
+  file:
+   src: /etc/nginx/sites-available/homepage
+   dest: /etc/nginx/sites-enabled/homepage
+   state: link
+  notify: Restart nginx

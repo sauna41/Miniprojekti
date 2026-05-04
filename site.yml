@@ -1,0 +1,36 @@
+- hosts: all
+  become: true
+
+  vars_prompt:
+      - name: newhostname
+        prompt: "Enter new hostname (empty will skip)"
+        private: no
+      - name: ip_address
+        prompt: "Enter new ip address (empty will skip)"
+        private: no
+      - name: netmask
+        prompt: "Enter new net mask (empty will skip)"
+        private: no
+      - name: gateway
+        prompt: "Enter new gateway (empty will skip)"
+        private: no
+      - name: dns_servers
+        prompt: "Enter new dns servers (empty will skip)"
+        private: no
+      - name: new_username
+        prompt: "Enter new username (empty will skip)"
+        private: no
+      - name: new_password
+        prompt: "Enter password for new user (empty will skip)"
+        private: yes
+        confirm: yes
+
+
+  roles:
+    - hostname
+    - nginx
+    - ufw
+    - ip
+    - packages
+    - user
+    - security

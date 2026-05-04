@@ -1,0 +1,9 @@
+- name: Install packages
+  ansible.builtin.apt:
+    name:
+      - curl
+      - micro
+      - git
+      - htop
+    state: latest
+    update_cache: yes

@@ -1,0 +1,17 @@
+- name: Set new hostname
+  ansible.builtin.hostname:
+    name: "{{ newhostname }}"
+  when: newhostname | length > 1  
+
+- name: Update /etc/hosts file
+  ansible.builtin.lineinfile:
+    path: /etc/hosts
+    regexp: '^127\.0\.1\.1'
+    line: "127.0.1.1 {{ newhostname }}"
+    state: present
+  when: newhostname | length > 1
+
+- name: Hostname not defined
+  ansible.builtin.debug:
+    msg: "Hostname not defined  — skipping hostname change."
+  when: newhostname | length < 1

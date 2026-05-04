@@ -1,0 +1,13 @@
+- name: Apply Network template
+  template:
+    src: files/network.conf.j2
+    dest: /etc/network/interfaces
+  notify: Restart network
+  when:  
+    -  ip_address |  length > 1
+
+- name: IP address not defined
+  ansible.builtin.debug:
+    msg: "IP address not defined  — skipping ip address change."
+  when: ip_address | length < 1
+ 
