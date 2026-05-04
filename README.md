@@ -17,7 +17,16 @@ Projekti automatisoi uuden Debian-virtuaalikoneen peruskonfigurointeja Ansiblell
 - Nginx web-palvelimen käynnistäminen
 - perustyökalujen asentaminen (curl, git, htop, micro, wget)
 
-<img width="207" height="507" alt="image" src="https://github.com/user-attachments/assets/4fcda1e8-d5b7-4cfd-b0c0-54227f9ec931" />
+### Projektin rakenne
+
+```
+miniprojekti/
+  ├── inventory
+  ├── playbook.yml
+  ├── setup.sh 
+  ├── vars.yml 
+  └── roles/
+```
 
 
 Tekijät:
